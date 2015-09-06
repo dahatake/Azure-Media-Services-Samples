@@ -12,7 +12,7 @@ Azure Media Services を始めるためのサンプルコードです。
 当該Azure Media Services アカウントの全てのオブジェクトを削除します。技術評価時のクリーンアップ用です。
 注意をして使ってください。
 
-### StandardDynamicPackaging
+### StandardDynamicPackaging (C#)
 - コンソール
 - Media Services .NET SDK Extensions
 
@@ -24,7 +24,7 @@ VoD用の配信の基本動作です。この中では以下を行います。
 - 再生用URLをデスクトップ上のテキストファイルに出力
 
 
-### SecureDynamicPackaging
+### SecureDynamicPackaging (C#)
 - コンソール
 - Media Services .NET SDK Extensions
 
@@ -36,7 +36,7 @@ VoD用の配信で、セキュリティオプションを付けたものです�
 - 配信設定
 - 再生用URLをデスクトップ上のテキストファイルに出力
 
-## LiveAdmin
+## LiveAdmin (C#)
 - Web (ASP.NET)
 - Media Services .NET SDK Extensions
 
