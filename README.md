@@ -12,6 +12,14 @@ Azure Media Services を始めるためのサンプルコードです。
 当該Azure Media Services アカウントの全てのオブジェクトを削除します。技術評価時のクリーンアップ用です。
 注意をして使ってください。
 
+### AzureMediaPlayer_Simple
+- html
+
+最新の Azure Media Player ライブラリーを呼び出した、一番単純なサンプルです。
+
+参考: http://amp.azure.net/libs/amp/latest/docs/
+
+
 ### StandardDynamicPackaging (C#)
 - コンソール
 - Media Services .NET SDK Extensions
@@ -43,4 +51,4 @@ VoD用の配信で、セキュリティオプションを付けたものです�
 Live配信中のプレビューと本番の絵と音の確認ができます。
 - ボタンの動作は少しバギーなのでご注意ください...
 
-ご参考: http://azure.microsoft.com/ja-jp/documentation/services/media-services/
+参考: http://azure.microsoft.com/ja-jp/documentation/services/media-services/
