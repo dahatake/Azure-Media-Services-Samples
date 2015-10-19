@@ -69,4 +69,11 @@ https://daiyuhatakeyama.wordpress.com/2014/09/26/azure-media-indexer-%e3%81%a8-m
 Live配信中のプレビューと本番の絵と音の確認ができます。
 - ボタンの動作は少しバギーなのでご注意ください...
 
+## 11. LiveViewing (HTML)
+- Azure Mobile Services
+- Application Insight
+
+ライブ視聴の際には、ユーザー投稿と、視聴データの2つが最低限必要となります。ここでは、それらを既存のAzureのモジュールで実現するサンプルとなります。
+
+
 参考: http://azure.microsoft.com/ja-jp/documentation/services/media-services/
