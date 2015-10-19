@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>ライブ視聴ページ</title>
+<link rel="stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><![endif]-->
+
+<link href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
+<script src= "//amp.azure.net/libs/amp/latest/azuremediaplayer.min.js"></script>
+<script type="text/javascript" src="smartRollover.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+    <header>
+      <h1>ライブ視聴ページ</h1>
+    </header>
+
+<div id="inner">
+  <article id="main">
+    <video id="vid1" class="azuremediaplayer amp-default-skin" 
+	autoplay controls width="760px" height="400" align="center" 
+	poster="images/img_01.jpg" data-setup='{"nativeControlsForTouch": false,
+	 "language":"ja"}'>
+      <source src="http://amssamples.streaming.mediaservices.windows.net/91492735-c523-432b-ba01-faba6c2206a2/AzureMediaServicesPromo.ism/manifest" type="application/vnd.ms-sstr+xml" />
+      <p class="amp-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video </p>
+    </video>
+
+    <section class="action">
+    </section>
+
+    <ul id="todo-items">
+    </ul>
+  </article>
+
+  <article id="sideArea">
+    <form id="add-item">
+      <button type="submit">コメントの追加</button>
+      <div>
+        <input type="text" id="new-item-text" placeholder="コメントする" />
+      </div>
+    </form>
+    <p id="summary">読み込み中...</p>
+  </article>
+</div>
+
+  <footer> <a href="http://www.windowsazure.com/en-us/develop/mobile/"> Learn more about Microsoft Azure Mobile Services </a>
+    <ul id="errorlog">
+    </ul>
+  </footer>
+</div>
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script> 
+<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script> 
+<script src="page.js"></script> 
+
+<!--
+アプリケーションに関するエンド ユーザーの利用状況分析を収集するには、
+追跡する各ページに以下のスクリプトを挿入します。
+このコードを、終了 </head> タグの直前と、
+andその他のすべてのスクリプトの前に配置します。最初のデータが数秒後に
+自動的に表示されます。
+--> 
+
+
+<script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+        }({
+            instrumentationKey:"<Application Insightのキー>"
+        });
+        
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script> 
+
+</body>
+</html>
