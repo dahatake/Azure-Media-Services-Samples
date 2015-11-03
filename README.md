@@ -5,14 +5,14 @@ Azure Media Services を始めるためのサンプルコードです。
 - 例外処理を記述していません
 - パラメータとして、app.config か web.config に、自分のAzure Media Services の[アカウント名]と[アカウントキー]を設定します。
 
-### 0. CleanUpWAMS (C#)
+### 00. CleanUpWAMS (C#)
 - コンソール
 - Media Services .NET SDK Extensions
 
 当該Azure Media Services アカウントの全てのオブジェクトを削除します。技術評価時のクリーンアップ用です。
 注意をして使ってください。
 
-### 1. AzureMediaPlayer_Simple
+### 01. AzureMediaPlayer_Simple
 - html
 
 最新の Azure Media Player ライブラリーを呼び出した、一番単純なサンプルです。
@@ -20,7 +20,7 @@ Azure Media Services を始めるためのサンプルコードです。
 参考: http://amp.azure.net/libs/amp/latest/docs/
 
 
-### 2. StandardDynamicPackaging (C#)
+### 02. StandardDynamicPackaging (C#)
 - コンソール
 - Media Services .NET SDK Extensions
 
@@ -32,7 +32,7 @@ VoD用の配信の基本動作です。この中では以下を行います。
 - 再生用URLをデスクトップ上のテキストファイルに出力
 
 
-### 3. SecureDynamicPackaging (C#)
+### 03. SecureDynamicPackaging (C#)
 - コンソール
 - Media Services .NET SDK Extensions
 
@@ -44,7 +44,7 @@ VoD用の配信で、セキュリティオプションを付けたものです�
 - 配信設定
 - 再生用URLをデスクトップ上のテキストファイルに出力
 
-### 4. AzureMediaIndexer (C#)
+### 04. AzureMediaIndexer (C#)
 - コンソール
 - Media Services .NET SDK Extensions
 
@@ -60,6 +60,17 @@ https://msdn.microsoft.com/en-us/library/dd576287.aspx
 
 こちらに、全体の説明があります。
 https://daiyuhatakeyama.wordpress.com/2014/09/26/azure-media-indexer-%e3%81%a8-microsoft-translator-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%80%81%e8%8b%b1%e8%aa%9e%e3%81%ae%e5%8b%95%e7%94%bb%e3%81%ab%e3%80%81%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%ad%97/
+
+## 05. SwitchVideoPlayerURL (C#)
+- Web (ASP.NET SignalR)
+- Azure Media Player
+
+再生中のPlayerに、ASP.NET SignalRを使って、再生URLを一斉送信します。
+ index.html: ユーザー画面
+ admin.html: 送信側画面
+
+ASP.NET SignalRについては、こちらを参考にしてください。
+http://www.asp.net/signalr
 
 
 ## 10. LiveAdmin (C#)
