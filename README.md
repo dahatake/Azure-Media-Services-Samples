@@ -72,6 +72,18 @@ https://daiyuhatakeyama.wordpress.com/2014/09/26/azure-media-indexer-%e3%81%a8-m
 ASP.NET SignalRについては、こちらを参考にしてください。
 http://www.asp.net/signalr
 
+## 06. JavaVoD (Java)
+- Java SDK
+
+VoDの基本動作のサンプルです。ファイルサイズ大きめの場合の対応をしています。Resourceのクエリには、ODataのクエリ文を使っています。
+各種APIについては、JavaDocを参照ください。
+
+Azure JavaDoc:
+http://azure.github.io/azure-sdk-for-java/
+
+Azure Toolkit for Eclipse のインストール:
+https://msdn.microsoft.com/library/azure/hh690946.aspx
+
 
 ## 10. LiveAdmin (C#)
 - Web (ASP.NET)
@@ -86,5 +98,10 @@ Live配信中のプレビューと本番の絵と音の確認ができます。
 
 ライブ視聴の際には、ユーザー投稿と、視聴データの2つが最低限必要となります。ここでは、それらを既存のAzureのモジュールで実現するサンプルとなります。
 
+## 12. LiveConsole (C#)
+- コンソール
+- Media Services .NET SDK Extensions
+
+Live配信用のチャネルの作成と、配信実行を行います。
 
 参考: http://azure.microsoft.com/ja-jp/documentation/services/media-services/
