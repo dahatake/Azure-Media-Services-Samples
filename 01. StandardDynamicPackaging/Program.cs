@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Microsoft.WindowsAzure.MediaServices.Client;
 
@@ -57,10 +53,10 @@ namespace DynamicPackaging
 			Console.WriteLine("  トランスコード開始");
 			// 3.b.1. ジョブ作成
 			var job = context.Jobs.CreateWithSingleTask(
-				MediaProcessorNames.AzureMediaEncoder,
-				MediaEncoderTaskPresetStrings.H264AdaptiveBitrateMP4SetSD4x3, // エンコード設定
-				// XML文字列全体の参照: http://msdn.microsoft.com/en-us/library/dn619392.aspx
-				// Stitching: http://msdn.microsoft.com/en-us/library/dn640504.aspx
+				"Media Encoder Standard",
+				"H264 Multiple Bitrate 4x3 SD", 
+					// エンコード設定 https://msdn.microsoft.com/en-us/library/azure/mt269960.aspx
+					// Stitching: http://msdn.microsoft.com/en-us/library/dn640504.aspx
 				asset,
 				asset.Name + "-ForStreaming",
 				AssetCreationOptions.None);
