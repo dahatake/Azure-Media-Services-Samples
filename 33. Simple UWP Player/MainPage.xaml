@@ -1,0 +1,14 @@
+﻿<Page
+    x:Class="Simple_UWP_Player.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Simple_UWP_Player"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="458" Margin="10,10,0,0" VerticalAlignment="Top" Width="868"/>
+
+	</Grid>
+</Page>
