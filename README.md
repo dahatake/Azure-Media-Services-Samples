@@ -125,13 +125,17 @@ http://dahatakesignalrplayer.azurewebsites.net/admin.html
 ASP.NET SignalR:
 http://www.asp.net/signalr
 
-
 ##33. Simple UWP Player
 - Universal Windows Platform
 
 Windows 10つまり、UWPでは、H.264ベースのMPEG-DASH/HLSが、OSレベルのMedia Foundationにてサポートされています。
 これまでは、Smooth Streamingの追加のプラグインが必要でしたら、UWPではそれが不要です。
 このサンプルではMPEG-DASHのストリームを再生しています。肝は1行です。ご覧あれ。
+
+##33. 34. Simple UWP PlayReady Player
+- Universal Windows Platform
+
+同じくUWPでは、PlayReadyがOSレベルでサポートされています。PlayReady プラグインも同じく不要です。
 
 
 
