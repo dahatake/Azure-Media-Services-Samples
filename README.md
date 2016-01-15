@@ -47,6 +47,20 @@ JavaのVoDの一番シンプルな制御になります
 Azure SDK for Java - Media Services:
 https://github.com/Azure/azure-sdk-for-java/tree/master/services/azure-media
 
+### 04. Bulk Upload (C#)
+- コンソール
+- Media Services .NET SDK Extensions
+
+他のファイル高速転送ツールと組み合わせて、Azure Media Servicesにファイルをバルクアップロードします。
+1. Azure Media Servicesに登録したいファイルのリストを、マニフェストファイル、として作成
+2. Azure Blob内に監視コンテナ(フォルダー)作成
+(ツールで、監視コンテナへ、ファイル転送)
+3. Azure Media Servicesが、ファイル受信完了を確認すると、1件ずつAssetが作成されます。
+
+
+
+
+
 ## Live
 Liveストリーミング用です
 
