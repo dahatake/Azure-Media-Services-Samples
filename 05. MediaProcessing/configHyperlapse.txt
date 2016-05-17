@@ -1,0 +1,13 @@
+﻿{
+    "Version":1.0,
+    "Sources": [
+        {
+            "StartFrame":0,
+            "NumFrames":10000
+        }
+    ],
+    "Options": {
+        "Speed":20,
+        "Stabilize":true
+    }
+}
