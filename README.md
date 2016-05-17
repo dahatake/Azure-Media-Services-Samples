@@ -159,5 +159,7 @@ Windows 10つまり、UWPでは、H.264ベースのMPEG-DASH/HLSが、OSレベ�
 
 同じくUWPでは、PlayReadyがOSレベルでサポートされています。PlayReady プラグインも同じく不要です。
 
-
+Azure Media Services デモサイト:
+http://azuremedialabs.azurewebsites.net/index.html
+- Azure Media Services のコア機能を一通り体験できます。 
 
