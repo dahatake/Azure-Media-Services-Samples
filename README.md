@@ -58,6 +58,14 @@ https://github.com/Azure/azure-sdk-for-java/tree/master/services/azure-media
 3. Azure Media Servicesが、ファイル受信完了を確認すると、1件ずつAssetが作成されます。
 
 
+### 05. MediaProcessing (C#)
+- コンソール
+- Media Services .NET SDk Extentions
+
+実は内容は、[01. StandardDynamicPackaging (C#)] と、殆ど一緒です。動画ファイルが出来上がった後、という意味では、トランスコードも、Media Analyticsもプログラムコードは同じです。Media Processor 名と構成ファイルだけ変更すれば動きます。
+
+- 注意点
+「Azure Media Indexer」が選択できません。やろうとおもえばできますが、エレガントな手が思いつかず...
 
 
 
