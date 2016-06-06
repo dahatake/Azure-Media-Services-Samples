@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Azure Media Services - Video Edior</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Begin External Libraries -->
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <script src="Scripts/jquery.blockUI.js"></script>
+
+    <!-- Azure Media Plaer Video Editor plugin -->
+    <link rel="stylesheet" type="text/css" href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/amve.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/amveSample.css" />
+
+    <script src="//amp.azure.net/libs/amp/latest/azuremediaplayer.min.js"></script>
+    <script src="Scripts/amve.min.js"></script>
+    <script src="Scripts/amveSample.js"></script>
+
+
+</head>
+<body onload="initPlayer();"
+      style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: x-large;">
+
+    <h1>Azure Media Player - Video Editor plugin [Pre-Release]</h1>
+    <h4>ご参考: <a href="https://azure.microsoft.com/en-us/blog/video-editor-plugin/">https://azure.microsoft.com/en-us/blog/video-editor-plugin/</a></h4>
+
+    <div id="urlEntryContainer">
+        <h4>Player の URL入力</h4>
+        <input id="urlEntryTxt" type="text" width="400" value="http://dahatakemediaservices.streaming.mediaservices.windows.net/bd428aeb-3743-4f59-b435-14c0fd52f527/Take%20Your%20Free%20Ride_720.ism/manifest" />
+        &nbsp;
+        <button id="urlEntrySubmitBtn">再生</button>
+        <hr />
+    </div>
+    <div id="amve">
+        <video id="vid1" class="azuremediaplayer amp-default-skin amp-big-play-centered">
+            <p class="amp-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video</p>
+        </video>
+    </div>
+
+    <div id="ampCliped">
+        <video id="vid2" class="azuremediaplayer amp-default-skin amp-big-play-centered">
+            <p class="amp-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video</p>
+        </video>
+    </div>
+
+
+</body>
+</html>

@@ -67,8 +67,6 @@ https://github.com/Azure/azure-sdk-for-java/tree/master/services/azure-media
 - 注意点
 「Azure Media Indexer」が選択できません。やろうとおもえばできますが、エレガントな手が思いつかず...
 
-
-
 ## Live
 Liveストリーミング用です
 
@@ -163,3 +161,9 @@ Azure Media Services デモサイト:
 http://azuremedialabs.azurewebsites.net/index.html
 - Azure Media Services のコア機能を一通り体験できます。 
 
+##35. Rought Cut Video Editor
+- Web (ASP.NET Web API)
+- Azure Media Player
+- Media Services .NET SDK Extensions
+
+Azure Media Player plugin ベースのラフカットビデオ編集ツールです。LiveとVoDに対応しています。Liveでは、Dynamic Manifestが有効的ではないので、Media Encoder Standard 限定の実装にしています。
