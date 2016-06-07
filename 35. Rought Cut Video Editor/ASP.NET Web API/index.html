@@ -1,27 +1,35 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Azure Media Services - Video Edior</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Azure Media Services - Video Edior</title>
 
     <!-- Begin External Libraries -->
-    <script src="Scripts/jquery-2.2.3.min.js"></script>
     <script src="Scripts/modernizr-2.8.3.js"></script>
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
 
-    <script src="Scripts/jquery.blockUI.js"></script>
+    <!-- Begin External CSS -->
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- End External CSS -->
 
-    <!-- Azure Media Plaer Video Editor plugin -->
-    <link rel="stylesheet" type="text/css" href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" />
-    <link rel="stylesheet" type="text/css" href="Content/amve.min.css" />
-    <link rel="stylesheet" type="text/css" href="Content/amveSample.css" />
+
+    <script src="Scripts/jquery.blockUI.js"></script>
 
     <script src="//amp.azure.net/libs/amp/latest/azuremediaplayer.min.js"></script>
     <script src="Scripts/amve.min.js"></script>
     <script src="Scripts/amveSample.js"></script>
 
+
+    <!-- Azure Media Plaer Video Editor plugin -->
+    <link rel="stylesheet" type="text/css" href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/amve.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/amveSample.css" />
+    <link rel="stylesheet" type="text/css" href="Content/Site.css" />
+    
 
 </head>
 <body onload="initPlayer();"
@@ -44,6 +52,7 @@
     </div>
 
     <div id="ampCliped">
+        <h4>トランスコード結果</h4>
         <video id="vid2" class="azuremediaplayer amp-default-skin amp-big-play-centered">
             <p class="amp-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video</p>
         </video>
