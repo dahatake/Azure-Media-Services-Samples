@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+	<title>Azure Media Player: URL Switching</title>
+
+	<link href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
+	<script src="//amp.azure.net/libs/amp/latest/azuremediaplayer.min.js"></script>
+
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+	<h1>Azure Media Player</h1>
+	Sessions:	<div id="concurrentConnection" style="font-size: 50px;"></div>
+	<br />
+
+	<video id="videoplayer" class="azuremediaplayer amp-default-skin"
+		width="640" height="400">
+		<source src="http://amssamples.streaming.mediaservices.windows.net/91492735-c523-432b-ba01-faba6c2206a2/AzureMediaServicesPromo.ism/manifest" type="application/vnd.ms-sstr+xml" />
+	</video>
+
+	<ul id="debugconsole"></ul>
+
+	<script src="Scripts/jquery-2.1.4.min.js"></script>
+	<script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
+	<script src="signalr/hubs"></script>
+
+	<script type="text/javascript">
+
+		$(function () {
+			var currentconnection = 0;
+			var currentpos = 0;
+			// Hubへの接続
+			var con = $.connection.MonitorHub;
+
+			// クライアント処理
+			con.client.SendBroadcastMessage = function (url, concurrentConnection) {
+
+				// サーバー側セッション数の表示
+				currentconnection = concurrentConnection;
+				$('#concurrentConnection').text(currentconnection);
+
+				// 映像再生位置の調整
+				if (url.length > 0) {
+					var myPlayer = amp('videoplayer', { /* Options */
+						autoplay: true,
+						controls: true
+					});
+					currentpos = myPlayer.currentTime();
+					myPlayer.src([{
+						src: url,
+						type: "application/vnd.ms-sstr+xml"
+					}]);
+
+					if (myPlayer.isLive()) {
+						myPlayer.on('canplaythrough', function () {
+							this.play();
+						})
+					} else {
+						myPlayer.on('canplaythrough', function () {
+							this.currentTime(currentpos);
+							this.play();
+						})
+					}
+
+				}
+				// Debug
+				$('#debugconsole').append('<li>' + currentpos +
+							' : ' + url + '</li>');
+
+			};
+
+			// クライアント側: 監視サーバーからセッション切断
+			// http://www.asp.net/signalr/overview/signalr-20/hubs-api/handling-connection-lifetime-events
+			$.connection.hub.disconnected(function () {
+				// Debug
+				$('#debugconsole').append('<li>Disconnected</li>');
+
+				setTimeout(function () {
+					$.connection.hub.start();
+				}, 5000)
+
+			});
+
+			// クライアント側: 監視サーバーからの再接続時
+			// http://www.asp.net/signalr/overview/signalr-20/hubs-api/handling-connection-lifetime-events
+			$.connection.hub.reconnected(function () {
+				// Debug
+				$('#debugconsole').append('<li>Reconnected</li>');
+
+				setTimeout(function () {
+					$.connection.hub.start();
+				}, 5000)
+
+			});
+
+			function openSession() {
+				$.connection.hub.start().done(function () {
+					$('#sendmessage').click(function () {
+						$.connection.MonitorHub.server.SendBroadcastMessage("");
+					});
+
+				});
+			};
+
+			// 初期処理
+			openSession();
+			$.connection.hub.start().done(function () {
+				$.connection.MonitorHub.server.SendBroadcastMessage("");
+				// Debug
+				$('#debugconsole').append('<li>Connected</li>');
+			})
+
+		});
+	</script>
+
+</body>
+
+</html>
