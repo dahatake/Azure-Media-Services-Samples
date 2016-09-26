@@ -7,8 +7,8 @@
 	<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT" />
 	<title>Azure Media Services からのストリーミング</title>
 
-<link href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
-<script src= "//amp.azure.net/libs/amp/latest/azuremediaplayer.min.js"></script>
+	<link href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
+	<script src= "//amp.azure.net/libs/amp/latest/azuremediaplayer.min.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Azure Meida Services Streaming" />
@@ -22,20 +22,29 @@
 <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
 
 	<h1>Azure Media Services からのストリーミング</h1>
-	
-<video id="vid1" class="azuremediaplayer amp-default-skin" 
-	autoplay controls width="640" height="400" 
-	data-setup='{"nativeControlsForTouch": false,
-	 "language":"ja"}'>
-    <source src="http://amssamples.streaming.mediaservices.windows.net/91492735-c523-432b-ba01-faba6c2206a2/AzureMediaServicesPromo.ism/manifest" type="application/vnd.ms-sstr+xml" />
-    <p class="amp-no-js">
-        To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video
-    </p>
-</video>
+	<video id="azuremediaplayer" class="azuremediaplayer amp-default-skin amp-big-play-centered" tabindex="0"></video>
 
-<h5>
-	ご利用のデバイスとネットワークの状態次第では、再生できない場合がありますのでご了承ください。
-</h5>
+	<h5>
+		ご利用のデバイスとネットワークの状態次第では、再生できない場合がありますのでご了承ください。
+	</h5>
+
+	<script>
+	var myOptions = {
+		"nativeControlsForTouch": false,
+		controls: true,
+		autoplay: true,
+		width: "640",
+		height: "400",
+		language: "ja"
+	}
+	myPlayer = amp("azuremediaplayer", myOptions);
+	myPlayer.src([
+	        {
+	                "src": "//amssamples.streaming.mediaservices.windows.net/91492735-c523-432b-ba01-faba6c2206a2/AzureMediaServicesPromo.ism/manifest",
+	                "type": "application/vnd.ms-sstr+xml"
+	        }
+	]);
+	</script>
 
 </body>
 </html>
