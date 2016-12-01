@@ -7,7 +7,7 @@
 	<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
 	<title>Azure Media Player: URL Switching : Admin Console</title>
 
-	<link href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
+    <link href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
 	<script src="//amp.azure.net/libs/amp/latest/azuremediaplayer.min.js"></script>
 
 </head>
@@ -16,17 +16,14 @@
 	Session:	<div id="concurrentConnection" style="font-size: 50px;"></div>
 	<br />
 
-	<input type="text" id="newurl" style="width:80%">
+	<input type="text" id="newurl" style="width:50%">
 	<input type="button" id="sendmessage" value="送信" />
 
-	<video id="videoplayer" class="azuremediaplayer amp-default-skin"
-		   width="640" height="400">
-	</video>
-
+    <video id="azuremediaplayer" class="azuremediaplayer amp-default-skin amp-big-play-centered" tabindex="0"></video>
 	<ul id="debugconsole"></ul>
 
-	<script src="Scripts/jquery-2.1.4.min.js"></script>
-	<script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.1.min.js"></script>
 	<script src="signalr/hubs"></script>
 
 	<script type="text/javascript">
@@ -46,9 +43,12 @@
 
 				// 映像再生位置の調整
 				if (url.length > 0) {
-					var myPlayer = amp('videoplayer', { /* Options */
+                    var myPlayer = amp('azuremediaplayer', { /* Options */
+                        "nativeControlsForTouch": false,
 						autoplay: true,
-						controls: true
+                        controls: true,
+                        width: "640",
+                        height: "400"
 					});
 					currentpos = myPlayer.currentTime();
 					myPlayer.src([{
@@ -111,7 +111,7 @@
 			// 初期処理
 			openSession();
 			$.connection.hub.start().done(function () {
-				$.connection.MonitorHub.server.SendBroadcastMessage($('#newurl').val());
+                $.connection.MonitorHub.server.SendBroadcastMessage($('#newurl').val());
 				// Debug
 				$('#debugconsole').append('<li>Connected</li>');
 			})

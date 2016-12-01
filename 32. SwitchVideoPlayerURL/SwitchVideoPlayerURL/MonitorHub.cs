@@ -18,7 +18,7 @@ namespace SwitchVideoPlayerURL
 		[HubMethodName("SendBroadcastMessage")]		
 		public void SendBroadcastMessage(string Url)
 		{
-			if (Url.Length > 0)
+			if (Url.Length > 0 || _currentURL.Length == 0)
 			{
 				_currentURL = Url;
 			}
@@ -29,8 +29,14 @@ namespace SwitchVideoPlayerURL
 
 		public override System.Threading.Tasks.Task OnConnected()
 		{
+            var currentURL = "";
+            if (_currentURL.Length > 0)
+            {
+                currentURL = _currentURL;
+            }
+
 			_concurrentConnection += 1;
-			Clients.All.broadcastMessage("", _concurrentConnection);
+			Clients.All.broadcastMessage(currentURL, _concurrentConnection);
 			return base.OnConnected();
 		}
 
