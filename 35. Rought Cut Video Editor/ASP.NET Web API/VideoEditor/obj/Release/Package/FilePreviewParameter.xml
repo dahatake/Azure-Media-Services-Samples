@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="dahatakevideoeditor" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\dahatake\\OneDrive\\ドキュメント\\GitHub\\Azure-Media-Services-Samples\\35\.\ Rought\ Cut\ Video\ Editor\\ASP\.NET\ Web\ API\\VideoEditor\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\dahatake\\OneDrive\\ドキュメント\\GitHub\\Azure-Media-Services-Samples\\35\.\ Rought\ Cut\ Video\ Editor\\ASP\.NET\ Web\ API\\VideoEditor\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

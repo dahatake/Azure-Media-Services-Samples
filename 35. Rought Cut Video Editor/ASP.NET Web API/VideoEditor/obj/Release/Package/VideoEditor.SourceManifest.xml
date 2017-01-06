@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\dahatake\OneDrive\ドキュメント\GitHub\Azure-Media-Services-Samples\35. Rought Cut Video Editor\ASP.NET Web API\VideoEditor\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\dahatake\OneDrive\ドキュメント\GitHub\Azure-Media-Services-Samples\35. Rought Cut Video Editor\ASP.NET Web API\VideoEditor\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\dahatake\OneDrive\ドキュメント\GitHub\Azure-Media-Services-Samples\35. Rought Cut Video Editor\ASP.NET Web API\VideoEditor\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
