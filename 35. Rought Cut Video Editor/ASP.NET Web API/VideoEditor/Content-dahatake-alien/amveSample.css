@@ -1,0 +1,11 @@
+﻿html, body {
+    height:100%;
+    width:100%;
+}
+
+#videoContainer {
+    margin:auto;
+    width:50%;
+    height: 60%;
+    min-width: 625px;
+}
