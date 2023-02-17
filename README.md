@@ -6,6 +6,13 @@ Azure Media Services を始めるためのサンプルコードです
 - 参考ドキュメント:
 https://azure.microsoft.com/ja-jp/documentation/services/media-services/
 
+注意点:
+- このサンプルは、Azure Media Services SDK v2 のAPIを使用しています。v3の利用が推奨です。そのため公式ドキュメントのサンプルを利用することを強く推奨します。
+- v3 SDK のサンプルは、時間を見つけて作成予定ではあります。
+
+https://learn.microsoft.com/en-us/azure/media-services/latest/samples/samples-accounts-reference?amspage=header
+
+
 ## VoD
 Video on Demand用です
 
